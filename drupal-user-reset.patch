@@ -6,7 +6,7 @@ index 05316684e6..08f490e36f 100644
        throw new AccessDeniedHttpException();
      }
  
-+    if (!Crypt::hashEquals($hash, user_pass_rehash($user, $timestamp))) {
++    if (!hash_equals($hash, user_pass_rehash($user, $timestamp))) {
 +      // Given hash doesn't match user and timestamp.
 +      throw new AccessDeniedHttpException();
 +    }
